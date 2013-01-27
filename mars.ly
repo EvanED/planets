@@ -11,6 +11,18 @@
   #(set-paper-size "letter")
 }
 
+%%%%%%%%%%%%%
+%% Swiped (stolen) from the Lilypond docs.
+
+%% "\motif c" => the "buh buh buh bum bum dum dum bum" rhythm on C :-)
+
+motif =
+#(define-music-function (parser location p) (ly:pitch?)
+   "Make the rhythm in Mars (the Planets) at the given pitch"
+  #{ \times 2/3 { $p 8 $p $p } $p 4 $p $p 8 $p $p 4 #})
+
+%%%%%%%%%%%%%
+
 global = {
   \key c \major
   \numericTimeSignature
@@ -21,7 +33,6 @@ global = {
 fluteI = \relative c'' {
   \global
   % Music follows here.
-  
 }
 
 fluteII = \relative c'' {
@@ -190,7 +201,7 @@ viola = \relative c' {
 cello = \relative c {
   \global
   % Music follows here.
-  
+  \motif g
 }
 
 contrabass = \relative c {
@@ -374,32 +385,32 @@ contrabassPart = \new Staff \with {
 
 \score {
   <<
-    \fluteIPart
-    \fluteIIPart
-    \oboeIPart
-    \oboeIIPart
-    \englishHornPart
-    \clarinetIPart
-    \clarinetIIPart
-    \clarinetIIIPart
-    \bassoonIPart
-    \bassoonIIPart
-    \hornFIPart
-    \hornFIIPart
-    \hornFIIIPart
-    \trumpetCIPart
-    \trumpetCIIPart
-    \tromboneIPart
-    \tromboneIIPart
-    \timpaniPart
-    \glockenspielPart
-    \organPart
-    \harpPart
-    \violinIPart
-    \violinIIPart
-    \violaPart
+%    \fluteIPart
+%    \fluteIIPart
+%    \oboeIPart
+%    \oboeIIPart
+%    \englishHornPart
+%    \clarinetIPart
+%    \clarinetIIPart
+%    \clarinetIIIPart
+%    \bassoonIPart
+%    \bassoonIIPart
+%    \hornFIPart
+%    \hornFIIPart
+%    \hornFIIIPart
+%    \trumpetCIPart
+%    \trumpetCIIPart
+%    \tromboneIPart
+%    \tromboneIIPart
+%    \timpaniPart
+%    \glockenspielPart
+%    \organPart
+%    \harpPart
+%    \violinIPart
+%    \violinIIPart
+%    \violaPart
     \celloPart
-    \contrabassPart
+%    \contrabassPart
   >>
   \layout { }
   \midi { }
