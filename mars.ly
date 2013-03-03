@@ -667,7 +667,7 @@ contrabass = \relative c {
   \mark\default
   \times 2/3 { c8->\ffff c-> c->} c4 r |
   r c8-> c-> c4-> |
-  r4^\markup{\bold{Rall al fine.}} c8-> c-> c4-> |
+  r4^\markup{\bold{Rall al fine.}} c8-> c c4-> |
   \times 2/3 { c8-> c-> c->} c4-> r |
   r c-> c-> |
   r r c-> |
@@ -820,32 +820,32 @@ harpPart = \new PianoStaff \with {
 >>
 
 violinIPart = \new Staff \with {
-  instrumentName = "Vl. I"
-  shortInstrumentName = "Vl. I"
+  instrumentName = "1st Violins"
+  shortInstrumentName = "Vn. 1"
   midiInstrument = "violin"
 } \violinI
 
 violinIIPart = \new Staff \with {
-  instrumentName = "Vl. II"
-  shortInstrumentName = "Vl. II"
+  instrumentName = "2nd Violins"
+  shortInstrumentName = "Vn. 2"
   midiInstrument = "violin"
 } \violinII
 
 violaPart = \new Staff \with {
-  instrumentName = "Vla."
-  shortInstrumentName = "Vla."
+  instrumentName = "Violas"
+  shortInstrumentName = "Vas."
   midiInstrument = "viola"
 } { \clef alto \viola }
 
 celloPart = \new Staff \with {
-  instrumentName = "Cl."
-  shortInstrumentName = "Cl."
+  instrumentName = "Violoncellos"
+  shortInstrumentName = "Vc."
   midiInstrument = "cello"
 } { \clef bass \cello }
 
 contrabassPart = \new Staff \with {
-  instrumentName = "Cb."
-  shortInstrumentName = "Cb."
+  instrumentName = "Doublebasses"
+  shortInstrumentName = "Db."
   midiInstrument = "contrabass"
 } { \clef bass \contrabass }
 
@@ -876,7 +876,7 @@ contrabassPart = \new Staff \with {
 %    \violinIPart
 %    \violinIIPart
 %    \violaPart
-%    \celloPart
+    \celloPart
     \contrabassPart
   >>
   \layout { }
