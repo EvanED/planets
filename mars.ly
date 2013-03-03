@@ -204,8 +204,7 @@ celloMotifCC = \relative c {
   \times 2/3 { <<c8 c,>> <<c c'>> <<c c,>>} << { c4 c c8 c c4 } { c' c c8 c c4 } >>
 }
 
-cello = \relative c {
-  \global
+celloBassIntro = \relative c {
   % Music follows here.
   << \motif g s^\markup{\italic{col legno}}\p >> |
   \motif g |
@@ -267,6 +266,37 @@ cello = \relative c {
   \motif g |
   << \motif g     {s4_\markup{\italic{sempre cresc.}}} >> |
   \motif g |
+}
+
+celloBassRehersalVI = \relative c {
+  \mark\default
+  a4.\p\<( gs8 fss4. gs8 a4. b8) bs4.( cs8 d4.\> cs8) |
+  
+  \barNumberCheck #97
+  a4.\<( gs8 fss4. gs8 a4. b8) cs4.( ds8 es4.\> e8) |
+  a,4.\<( gs8 fss4. gs8 a4. b8) d?4.\>( cs8 bs4. cs8) |
+  es4.\<( e8 ds4. e8 es4. fs8) a4.\>( gs8 fss4. gs8) |
+  
+  \barNumberCheck #100
+  d?4.\p\<( cs8 bs4. cs8 d4. ds8) e4.( es8 fs4.\> es8) |
+  d?4.\<( cs8 bs4. cs8 d4. ds8) e4.( g?8 a4.\> g8) |
+  d?4.\<_\markup{\italic cresc.}( cs8 bs4. cs8 d4. ds8) fs4.\>( es8 e4. es8) |
+  
+  \barNumberCheck #103
+  a4.\<( gs8 fss4. gs8 a4. b8) d4.\>( cs8 bs4. cs8) |
+  \mark\default
+  c,?4.\p\<( b8 bf4. b8 c4. d8) ds4.( e8 f?4.\> e8) |
+  c4.\<( b8 bf4. b8 c4. d8) e4.( fs8 gs4.\> g8) |
+  
+  \barNumberCheck #106
+  c,4._\markup{\italic cresc.}\<( b8 bf4. b8 c4. d8) f4.\>( e8 ds4. e8) |
+  af4.\<( g8 fs4. g8 af4. a8) c4.\>( b8 as4. b8) |
+  c4.\<( b8 as4. b8 c4. b8) d4.\>( c8 b4. c8) |
+}  
+
+cello = \relative c {
+  \global
+  \celloBassIntro
   % The following measure is funky because of a lilypond bug (issue 245)
   \mark\default \times 2/3 { <<c8 c,\fff>> <<c c'>> <<c c,>>} << { c4 c c8 c c4 } { c' c c8 c c4 } >> |
   
@@ -333,32 +363,11 @@ cello = \relative c {
   \time 5/2
   \tempo \markup{\concat {(\teeny \general-align #Y #DOWN \note #"2" #1   " = "    \teeny \general-align #Y #DOWN \note #"2" #1)}}
   c?8 r r4 \clef bass fs,,,1~\> << fs {s2. s4\!} >> |
-  \mark\default
-  a4.\p\<( gs8 fss4. gs8 a4. b8) bs4.( cs8 d4.\> cs8) |
-  
-  \barNumberCheck #97
-  a4.\<( gs8 fss4. gs8 a4. b8) cs4.( ds8 es4.\> e8) |
-  a,4.\<( gs8 fss4. gs8 a4. b8) d?4.\>( cs8 bs4. cs8) |
-  es4.\<( e8 ds4. e8 es4. fs8) a4.\>( gs8 fss4. gs8) |
-  
-  \barNumberCheck #100
-  d?4.\p\<( cs8 bs4. cs8 d4. ds8) e4.( es8 fs4.\> es8) |
-  d?4.\<( cs8 bs4. cs8 d4. ds8) e4.( g?8 a4.\> g8) |
-  d?4.\<_\markup{\italic cresc.}( cs8 bs4. cs8 d4. ds8) fs4.\>( es8 e4. es8) |
-  
-  \barNumberCheck #103
-  a4.\<( gs8 fss4. gs8 a4. b8) d4.\>( cs8 bs4. cs8) |
-  \mark\default
-  c,?4.\p\<( b8 bf4. b8 c4. d8) ds4.( e8 f?4.\> e8) |
-  c4.\<( b8 bf4. b8 c4. d8) e4.( fs8 gs4.\> g8) |
-  
-  \barNumberCheck #106
-  c,4._\markup{\italic cresc.}\<( b8 bf4. b8 c4. d8) f4.\>( e8 ds4. e8) |
-  af4.\<( g8 fs4. g8 af4. a8) c4.\>( b8 as4. b8) |
-  c4.\<( b8 as4. b8 c4. b8) d4.\>( c8 b4. c8) |
-  
+
+  \celloBassRehersalVI
+
   \barNumberCheck #109
-  e,4.\!( d8 cs4. d8) g4.( f8) c'4.\<( b8) e4.( d8) \bar "||"
+  e'4.\!( d8 cs4. d8) g4.( f8) c'4.\<( b8) e4.( d8) \bar "||"
   %% These three measures are written suboptimally to work around a lilypond bug (issue 245)
   \time 5/4
   \times 2/3 { << g,8\fff g, >> << g g' >> << g g, >> } << { g4 g g8 g g4 } { g'4 g g8 g g4 } >> |
