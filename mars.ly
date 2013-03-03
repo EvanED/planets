@@ -182,31 +182,9 @@ lower = \relative c' {
   
 }
 
-violinI = \relative c'' {
-  \global
-  % Music follows here.
-  
-}
 
-violinII = \relative c'' {
-  \global
-  % Music follows here.
-  
-}
 
-viola = \relative c' {
-  \global
-  % Music follows here.
-  
-}
-
-celloMotifCC = \relative c {
-  % The following measure is funky because of a lilypond bug (issue 245)
-  \times 2/3 { <<c8 c,>> <<c c'>> <<c c,>>} << { c4 c c8 c c4 } { c' c c8 c c4 } >>
-}
-
-celloBassIntro = \relative c {
-  % Music follows here.
+stringIntroToRehersalI = \relative c' {
   << \motif g s^\markup{\italic{col legno}}\p >> |
   \motif g |
   \motif g |
@@ -229,6 +207,53 @@ celloBassIntro = \relative c {
   << \motif g    s\mf_\markup{\italic dim.} >> |
   \motif g |
   \motif g
+}
+
+stringNaturaleToRehersalII = \relative c' {
+  \barNumberCheck #29
+  << \motif g    {s4^\markup{\italic{tutti, naturale}}\f s s\>} >> |
+  << \motif g    {s4\! s s s\<} >> |
+  << \motif g    {s4\f s s\> s s\!} >> |
+  << \motif g    {s4 s s s\< } >> |
+  
+  \barNumberCheck #33
+  << \motif g    {s4\f\> s s s\<} >> |
+  << \motif g    {s4\f_\markup{\italic cresc.}} >> |
+  \motif g |
+  \motif g |
+  
+  \barNumberCheck #37
+  \motif g |
+  << \motif g     {s4_\markup{\italic{sempre cresc.}}} >> |
+  \motif g |
+}
+
+
+
+violinI = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+violinII = \relative c'' {
+  \global
+  % Music follows here.
+  
+}
+
+viola = \relative c' {
+  \global
+  % Music follows here.
+}
+
+celloMotifCC = \relative c {
+  % The following measure is funky because of a lilypond bug (issue 245)
+  \times 2/3 { <<c8 c,>> <<c c'>> <<c c,>>} << { c4 c c8 c c4 } { c' c c8 c c4 } >>
+}
+
+celloBassIntro = \relative c {
+  \transpose c c, \stringIntroToRehersalI
   
   \barNumberCheck #17
   \mark\default
@@ -251,22 +276,7 @@ celloBassIntro = \relative c {
   \motif g |
   \motif g |
   
-  \barNumberCheck #29
-  << \motif g    {s4^\markup{\italic{tutti, naturale}}\f s s\>} >> |
-  << \motif g    {s4\! s s s\<} >> |
-  << \motif g    {s4\f s s\> s s\!} >> |
-  << \motif g    {s4 s s s\< } >> |
-  
-  \barNumberCheck #33
-  << \motif g    {s4\f\> s s s\<} >> |
-  << \motif g    {s4\f_\markup{\italic cresc.}} >> |
-  \motif g |
-  \motif g |
-  
-  \barNumberCheck #37
-  \motif g |
-  << \motif g     {s4_\markup{\italic{sempre cresc.}}} >> |
-  \motif g |
+  \transpose c c, \stringNaturaleToRehersalII
 }
 
 celloBassRehersalVI = \relative c {
@@ -877,7 +887,7 @@ contrabassPart = \new Staff \with {
 %    \violinIIPart
 %    \violaPart
     \celloPart
-    \contrabassPart
+%    \contrabassPart
   >>
   \layout { }
   \midi { }
