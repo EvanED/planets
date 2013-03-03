@@ -207,65 +207,65 @@ celloMotifCC = \relative c {
 cello = \relative c {
   \global
   % Music follows here.
-  \times 2/3 {g8^\markup{\italic{col legno}}\p g g} g4 g g8 g g4 |
+  << \motif g s^\markup{\italic{col legno}}\p >> |
   \motif g |
   \motif g |
-  \times 2/3 {g8\< g g} g4 g g8 g g4 |
+  << \motif g s\< >> |
   
   \barNumberCheck #5
-  \times 2/3 {g8\> g g} g4 g g8 g g4 |
-  \times 2/3 {g8\! g g} g4 g g8 g g4 |
+  << \motif g    s\> >> |
+  << \motif g    s\! >> |
   \motif g |
   \motif g |
   
   \barNumberCheck #9
   \motif g |
   \motif g |
-  \times 2/3 {g8_\markup{\italic cresc.} g g} g4 g g8 g g4 |
+  << \motif g    s_\markup{\italic cresc.} >> |
   \motif g |
   
   \barNumberCheck #13
   \motif g |
-  \times 2/3 {g8\mf_\markup{\italic dim.} g g} g4 g g8 g g4 |
+  << \motif g    s\mf_\markup{\italic dim.} >> |
   \motif g |
   \motif g
   
   \barNumberCheck #17
   \mark\default
   %% TODO: show rests for the resting half
-  \times 2/3 {g8^\markup{\italic{only half}}\p g g} g4 g g8 g g4 |
-  \times 2/3 {g8\< g g} g4 g g8 g g4 |
-  \times 2/3 {g8\mp\> g g} g4 g g8 g g4 |
-  \times 2/3 {g8\! g g} g4 g g8 g g4 |
+  << \motif g    s^\markup{\italic{only half}}\p >> |
+  << \motif g    s\< >> |
+  << \motif g    s\mp\> >> |
+  << \motif g    s\! >> |
   
   \barNumberCheck #21
   \motif g |
   \motif g |
-  \times 2/3 {g8\< g g} g4 g g8 g g4 |
-  \times 2/3 {g8 g g} g4 g g8 g << g4 {s8 s8\mf} >> |
+  << \motif g    s\< >> |
+  << \motif g    {s1 s8 s\mf} >> |
   
   \barNumberCheck #25
   %% TODO: show rests for the resting half
-  \times 2/3 {g8^\markup{\italic{the other half, naturale}}_\markup{\italic{cresc}} g g} g4 g g8 g g4 |
+  << \motif g    s^\markup{\italic{the other half, naturale}}_\markup{\italic{cresc}} >> |
   \motif g |
   \motif g |
   \motif g |
   
   \barNumberCheck #29
-  \times 2/3 {g8^\markup{\italic{tutti, naturale}}\f g g} g4 g\> g8 g g4 |
-  \times 2/3 {g8\! g g} g4 g g8\< g g4 |
-  \times 2/3 {g8\f g g} g4 g\> g8 g g4\! |
-  \times 2/3 {g8 g g} g4 g g8\< g g4 |
+  << \motif g    {s4^\markup{\italic{tutti, naturale}}\f s s\>} >> |
+  << \motif g    {s4\! s s s\<} >> |
+  << \motif g    {s4\f s s\> s s\!} >> |
+  << \motif g    {s4 s s s\< } >> |
   
   \barNumberCheck #33
-  \times 2/3 {g8\f\> g g} g4 g g8\< g g4 |
-  \times 2/3 {g8\f_\markup{\italic cresc.} g g} g4 g g8 g g4 |
+  << \motif g    {s4\f\> s s s\<} >> |
+  << \motif g    {s4\f_\markup{\italic cresc.}} >> |
   \motif g |
   \motif g |
   
   \barNumberCheck #37
   \motif g |
-  \times 2/3 {g8_\markup{\italic{sempre cresc.}} g g} g4 g g8 g g4 |
+  << \motif g     {s4_\markup{\italic{sempre cresc.}}} >> |
   \motif g |
   % The following measure is funky because of a lilypond bug (issue 245)
   \mark\default \times 2/3 { <<c8 c,\fff>> <<c c'>> <<c c,>>} << { c4 c c8 c c4 } { c' c c8 c c4 } >> |
@@ -392,7 +392,7 @@ cello = \relative c {
   \mark\default
   \times 2/3 {g,,8\! g g} g4 g g8 g g4 |
   \motif g |
-  \times 2/3 {g8\f g g} g4 g g8 g g4 |
+  << \motif g    s\f >> |
   \motif g |
   
   \barNumberCheck # 138
