@@ -46,9 +46,50 @@ timeChangeRehersalXI = {
 
 
 \include "mars/string-snippets.ly"
+\include "mars/string-violin-2.ly"
 \include "mars/string-viola.ly"
 \include "mars/string-cello.ly"
 \include "mars/string-bass.ly"
+
+
+violinII = \relative c'' {
+  \global
+  \stringIntroToRehersalI  
+  
+  \barNumberCheck #17
+  \mark\default
+  R1*5/4*8 |
+  \violinViolaNaturale  
+  
+  \barNumberCheck #34
+  <<
+    { b2.:32\f_\markup{\italic{cresc.}} b2:32 | b2.:32 b2:32 | b2.:32 b2:32 | b2.:32 b2:32 | b2.:32_\markup{\italic{sempre cresc}} b2:32 | b2.:32 b2:32 | }
+    { f'2.:32 f2:32 | f2.:32 f2:32 | f2.:32 f2:32 | f2.:32 f2:32 | f2.:32 f2:32 | f2.:32 f2:32 | }
+  >>
+  
+  \barNumberCheck #40
+  \mark\default
+  << \transpose c c''' \celloMotifCC s\fff >> |
+  \transpose c c''' \celloMotifCC |
+  \transpose c c''' \celloMotifCC |
+  \transpose c c''' \celloMotifCC |
+
+  \barNumberCheck #44
+  \transpose c c''' \celloMotifCC |
+  \transpose c c''' \celloMotifCC |
+  \transpose c c''' \celloMotifCC |
+  \transpose c c''' \celloMotifCC |
+
+  \barNumberCheck #48
+  \transpose c c''' \celloMotifCC |
+  \transpose c c''' \celloMotifCC |
+  df2( ef4~\> ef df~ |
+  df c8\!) r r4 r2 |
+  
+  
+}
+
+
 
 fluteI = \relative c'' {
   \global
@@ -207,11 +248,6 @@ violinI = \relative c'' {
   
 }
 
-violinII = \relative c'' {
-  \global
-  % Music follows here.
-  
-}
 
 fluteIPart = \new Staff \with {
   instrumentName = "Fl. I"
@@ -411,10 +447,10 @@ contrabassPart = \new Staff \with {
 %    \organPart
 %    \harpPart
 %    \violinIPart
-%    \violinIIPart
-    \violaPart
-    \celloPart
-    \contrabassPart
+    \violinIIPart
+%    \violaPart
+%    \celloPart
+%    \contrabassPart
   >>
   \layout { }
   \midi { }

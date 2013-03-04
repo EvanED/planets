@@ -6,7 +6,17 @@ viola = \relative c' {
   \barNumberCheck #17
   \mark\default
   R1*5/4*8 |
-  \violinViolaNaturaleToRehersalII
+  \violinViolaNaturale
+  
+  << \motif g    {s4\f_\markup{\italic cresc.}} >> |
+  \motif g |
+  \motif g |
+  
+  \barNumberCheck #37
+  \motif g |
+  << \motif g     {s4_\markup{\italic{sempre cresc.}}} >> |
+  \motif g |
+  
   
   \barNumberCheck #40
   \mark\default \times 2/3 { <<c8 c,\fff>> <<c c'>> <<c c,>>} << { c4 c c8 c c4 } { c' c c8 c c4 } >> |

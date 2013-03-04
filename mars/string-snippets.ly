@@ -27,29 +27,21 @@ stringIntroToRehersalI = \relative c' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-violinViolaNaturaleToRehersalII = \relative c' {
+violinViolaNaturale = \relative c' {
   \barNumberCheck #25
-  << \motif g    {s4\mf^\markup{\italic{cresc.}}} >> |
+  << \motif g    {s4\mf^\markup{\italic{naturale}}_\markup{\italic{cresc.}}} >> |
   \motif g |
   \motif g |
   \motif g |
 
   \barNumberCheck #29
-  << \motif g    {s4^\markup{\italic{naturale}}\f s s\>} >> |
+  << \motif g    {s4\f s s\>} >> |
   << \motif g    {s4\! s s s\<} >> |
   << \motif g    {s4\f s s\> s s\!} >> |
   << \motif g    {s4 s s s\< } >> |
   
   \barNumberCheck #33
   << \motif g    {s4\f\> s s s\<} >> |
-  << \motif g    {s4\f_\markup{\italic cresc.}} >> |
-  \motif g |
-  \motif g |
-  
-  \barNumberCheck #37
-  \motif g |
-  << \motif g     {s4_\markup{\italic{sempre cresc.}}} >> |
-  \motif g |
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
