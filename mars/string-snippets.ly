@@ -97,22 +97,17 @@ celloBassIntro = \relative c {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-celloBassRehersalVI = \relative c {
-  \mark\default
-  a4.\p\<( gs8 fss4. gs8 a4. b8) bs4.( cs8 d4.\> cs8) |
-  
-  \barNumberCheck #97
-  a4.\<( gs8 fss4. gs8 a4. b8) cs4.( ds8 es4.\> e8) |
-  a,4.\<( gs8 fss4. gs8 a4. b8) d?4.\>( cs8 bs4. cs8) |
-  es4.\<( e8 ds4. e8 es4. fs8) a4.\>( gs8 fss4. gs8) |
-  
+celloBassMeasureOneHundred = \relative c {
   \barNumberCheck #100
   d?4.\p\<( cs8 bs4. cs8 d4. ds8) e4.( es8 fs4.\> es8) |
-  d?4.\<( cs8 bs4. cs8 d4. ds8) e4.( g?8 a4.\> g8) |
+  d?4.\<( cs8 bs4. cs8 d4. ds8) e4.( g?8 a4.\> gs8) |
   d?4.\<_\markup{\italic cresc.}( cs8 bs4. cs8 d4. ds8) fs4.\>( es8 e4. es8) |
   
   \barNumberCheck #103
   a4.\<( gs8 fss4. gs8 a4. b8) d4.\>( cs8 bs4. cs8) |
+}  
+
+celloBassRehersalVII = \relative c {
   \mark\default
   c,?4.\p\<( b8 bf4. b8 c4. d8) ds4.( e8 f?4.\> e8) |
   c4.\<( b8 bf4. b8 c4. d8) e4.( fs8 gs4.\> g8) |
@@ -121,4 +116,17 @@ celloBassRehersalVI = \relative c {
   c,4._\markup{\italic cresc.}\<( b8 bf4. b8 c4. d8) f4.\>( e8 ds4. e8) |
   af4.\<( g8 fs4. g8 af4. a8) c4.\>( b8 as4. b8) |
   c4.\<( b8 as4. b8 c4. b8) d4.\>( c8 b4. c8\!) |
+}  
+
+celloBassRehersalVI = \relative c {
+  \mark\default
+  a4.\p\<( gs8 fss4. gs8 a4. b8) bs4.( cs8 d4.\> cs8) |
+  
+  \barNumberCheck #97
+  a4.\<( gs8 fss4. gs8 a4. b8) cs4.( ds8 es4.\> e8) |
+  a,4.\<( gs8 fss4. gs8 a4. b8) d?4.\>( cs8 bs4. cs8) |
+  es4.\<( e8 ds4. e8 es4. fs8) a4.\>( gs8 fss4. gs8) |
+
+  \celloBassMeasureOneHundred
+  \celloBassRehersalVII
 }
