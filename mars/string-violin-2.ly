@@ -78,17 +78,11 @@ violinII = \relative c'' {
   f2 c8. c16 f2 |
   g2.~ g2 |
   f2 c8. c16 f2 |
-  g2.~ g2 |
+  a2.~ a2 |
   \mark\default R1*5/4*7 |
-  r4 r16 bs,,-.\f_\markup{\italic{cresc.}} ds-. e-. fs-. fs,-. gs-. a-. bs-. r r8 r4 |
-  
-  \barNumberCheck #92
-  r4 r16 bs-. ds-. e-. fs-. fs,-. gs-. a-. bs-. r r8 r4 |
-  r16 bs-.\ff ds-. e-. fs-. fs,-. gs-. a-. bs-. e,-. fs-. gs-. a-. bs,-. ds-. e-. fs-. bs,-. a-. bs-. |
-  
-  \barNumberCheck #94
-  c-. e-. a-. c-. fs,-. gs-. a-. cs-. bs-. bs,-. ds-. e-. fs-. cs'-. bs-. gs'-. fs-. gs-. a-. b-. |
-  \timeChangeRehersalVI c8 r r4 a,,1\>~ a^\!\fermata |
+
+  \violinsMeasureNinetyOne
+  \timeChangeRehersalVI c,8 r r4 a,,1\>~ a^\!\fermata |
   \mark\default gs1.:32\p gs1:32 |
   gs1.:32 gs1:32 |
   gs1.:32 gs1:32 |

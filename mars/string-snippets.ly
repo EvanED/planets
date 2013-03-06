@@ -115,7 +115,6 @@ celloBassRehersalVII = \relative c {
   \barNumberCheck #106
   c,4._\markup{\italic cresc.}\<( b8 bf4. b8 c4. d8) f4.\>( e8 ds4. e8) |
   af4.\<( g8 fs4. g8 af4. a8) c4.\>( b8 as4. b8) |
-  c4.\<( b8 as4. b8 c4. b8) d4.\>( c8 b4. c8\!) |
 }  
 
 celloBassRehersalVI = \relative c {
@@ -129,4 +128,19 @@ celloBassRehersalVI = \relative c {
 
   \celloBassMeasureOneHundred
   \celloBassRehersalVII
+  c4.\<( b8 as4. b8 c4. b8) d4.\>( c8 b4. c8\!) |
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+violinsMeasureNinetyOne = \relative c'' {
+  r4 r16 bs-.\f_\markup{\italic{cresc.}} ds-. e-. fs-. fs,-. gs-. a-. bs-. r r8 r4 |
+  
+  \barNumberCheck #92
+  r4 r16 bs-. ds-. e-. fs-. fs,-. gs-. a-. bs-. r r8 r4 |
+  r16 bs-.\ff ds-. e-. fs-. fs,-. gs-. a-. bs-. e,-. fs-. gs-. a-. bs,-. ds-. e-. fs-. bs,-. a-. bs-. |
+  
+  \barNumberCheck #94
+  c-. e-. a-. c-. fs,-. gs-. a-. cs-. bs-. bs,-. ds-. e-. fs-. cs'-. bs-. gs'-. fs-. gs-. a-. b-. |
 }

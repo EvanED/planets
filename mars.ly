@@ -45,18 +45,15 @@ timeChangeRehersalXI = {
 }
 
 
+
 \include "mars/string-snippets.ly"
+\include "mars/string-violin-1.ly"
 \include "mars/string-violin-2.ly"
 \include "mars/string-viola.ly"
 \include "mars/string-cello.ly"
 \include "mars/string-bass.ly"
 
-
-violinI = \relative c'' {
-  \global
-  % Music follows here.
-  
-}
+\addQuote "violin2" { \violinII }
 
 \include "mars/global-staves.ly"
 
@@ -83,7 +80,7 @@ violinI = \relative c'' {
 %    \glockenspielPart
 %    \organPart
 %    \harpPart
-%    \violinIPart
+    \violinIPart
     \violinIIPart
     \violaPart
     \celloPart
