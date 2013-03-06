@@ -44,21 +44,7 @@ timeChangeRehersalXI = {
   \tempo \markup{\concat{(\teeny \general-align #Y #DOWN \note #"4" #1   " = "    \teeny \general-align #Y #DOWN \note #"4" #1)}}
 }
 
-
-harpGGStartHigh = \relative c {
-  \times 2/3 { g8 g, g' } g,4 g' g,8 g' g,4
-}
-harpGGStartLow = \relative c {
-  \times 2/3 { g8 g' g, } g'4 g, g'8 g, g'4
-}
-
-harpIupper = \relative c'  { \global R1*5/4 }
-harpIIupper = \relative c' { \global R1*5/4 }
-
-
-harpIlower  = \relative c' { \global \harpGGStartHigh }
-harpIIlower = \relative c' { \global \harpGGStartLow }
-
+\include "mars/misc-harp.ly"
 
 \include "mars/string-snippets.ly"
 \include "mars/string-violin-1.ly"
