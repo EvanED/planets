@@ -45,6 +45,20 @@ timeChangeRehersalXI = {
 }
 
 
+harpGGStartHigh = \relative c {
+  \times 2/3 { g8 g, g' } g,4 g' g,8 g' g,4
+}
+harpGGStartLow = \relative c {
+  \times 2/3 { g8 g' g, } g'4 g, g'8 g, g'4
+}
+
+harpIupper = \relative c'  { \global R1*5/4 }
+harpIIupper = \relative c' { \global R1*5/4 }
+
+
+harpIlower  = \relative c' { \global \harpGGStartHigh }
+harpIIlower = \relative c' { \global \harpGGStartLow }
+
 
 \include "mars/string-snippets.ly"
 \include "mars/string-violin-1.ly"
@@ -79,12 +93,13 @@ timeChangeRehersalXI = {
 %    \timpaniPart
 %    \glockenspielPart
 %    \organPart
-%    \harpPart
-    \violinIPart
-    \violinIIPart
-    \violaPart
-    \celloPart
-    \contrabassPart
+    \harpIPart
+    \harpIIPart
+%    \violinIPart
+%    \violinIIPart
+%    \violaPart
+%    \celloPart
+%    \contrabassPart
   >>
   \layout { }
   \midi { }

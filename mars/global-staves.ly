@@ -136,18 +136,6 @@ pedal = \relative c {
   
 }
 
-upper = \relative c'' {
-  \global
-  % Music follows here.
-  
-}
-
-lower = \relative c' {
-  \global
-  % Music follows here.
-  
-}
-
 
 fluteIPart = \new Staff \with {
   instrumentName = "Fl. I"
@@ -280,16 +268,28 @@ organPart = <<
   } { \clef bass \pedal }
 >>
 
-harpPart = \new PianoStaff \with {
-  instrumentName = "Hp."
-  shortInstrumentName = "Hp."
+harpIPart = \new PianoStaff \with {
+  instrumentName = "Harp I"
+  shortInstrumentName = "Hp. I"
 } <<
-  \new Staff = "upper" \with {
+  \new Staff = "harpIupper" \with {
     midiInstrument = "harp"
-  } \upper
-  \new Staff = "lower" \with {
+  } \harpIupper
+  \new Staff = "harpIlower" \with {
     midiInstrument = "harp"
-  } { \clef bass \lower }
+  } { \clef bass \harpIlower }
+>>
+
+harpIIPart = \new PianoStaff \with {
+  instrumentName = "Harp II"
+  shortInstrumentName = "Hp. II"
+} <<
+  \new Staff = "harpIIupper" \with {
+    midiInstrument = "harp"
+  } \harpIIupper
+  \new Staff = "harpIIlower" \with {
+    midiInstrument = "harp"
+  } { \clef bass \harpIIlower }
 >>
 
 violinIPart = \new Staff \with {
