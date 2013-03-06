@@ -118,25 +118,6 @@ glockenspiel = \relative c'' {
   
 }
 
-right = \relative c'' {
-  \global
-  % Music follows here.
-  
-}
-
-left = \relative c' {
-  \global
-  % Music follows here.
-  
-}
-
-pedal = \relative c {
-  \global
-  % Music follows here.
-  
-}
-
-
 fluteIPart = \new Staff \with {
   instrumentName = "Fl. I"
   shortInstrumentName = "Fl. I"
@@ -253,19 +234,16 @@ glockenspielPart = \new Staff \with {
 
 organPart = <<
   \new PianoStaff \with {
-    instrumentName = "Org."
+    instrumentName = "Organ"
     shortInstrumentName = "Org."
   } <<
-    \new Staff = "right" \with {
+    \new Staff = "organRight" \with {
       midiInstrument = "church organ"
-    } \right
-    \new Staff = "left" \with {
+    } \organRight
+    \new Staff = "organLeft" \with {
       midiInstrument = "church organ"
-    } { \clef bass \left }
+    } { \clef bass \organLeft }
   >>
-  \new Staff = "pedal" \with {
-    midiInstrument = "church organ"
-  } { \clef bass \pedal }
 >>
 
 harpIPart = \new PianoStaff \with {
