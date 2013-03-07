@@ -1,8 +1,9 @@
+% -*- master:../mars.ly;
+
 cello = \relative c {
   \global
   \celloBassIntro
-  % The following measure is funky because of a lilypond bug (issue 245)
-  \mark\default \times 2/3 { <<c8 c,\fff>> <<c c'>> <<c c,>>} << { c4 c c8 c c4 } { c' c c8 c c4 } >> |
+  \mark\default \times 2/3 { <c c,>8 q q } q4 q q8 q q4 |
   
   \barNumberCheck #41
   \celloMotifCC | \celloMotifCC | \celloMotifCC | \celloMotifCC |
@@ -63,23 +64,20 @@ cello = \relative c {
   
   \barNumberCheck #94
   r bs,-. ds-. e-. fs-. cs'-. bs-. gs'-. fs-. bs,-. ds-. e-. fs-. cs'-. bs-. \clef tenor gs'-. fs-. gs-. a-. b-. \bar "||"
-  %% todo half=half notation above staff
-  \time 5/2
-  \tempo \markup{\concat {(\teeny \general-align #Y #DOWN \note #"2" #1   " = "    \teeny \general-align #Y #DOWN \note #"2" #1)}}
+  \timeChangeRehersalVI
   c?8 r r4 \clef bass fs,,,1~\> << fs {s2. s4\!} >> |
 
   \celloBassRehersalVI
 
   \barNumberCheck #109
   e'4.\!( d8 cs4. d8) g4.( f8) c'4.\<( b8) e4.( d8) \bar "||"
-  %% These three measures are written suboptimally to work around a lilypond bug (issue 245)
   \time 5/4
-  \times 2/3 { << g,8\fff g, >> << g g' >> << g g, >> } << { g4 g g8 g g4 } { g'4 g g8 g g4 } >> |
-  \times 2/3 { << g8 g, >> << g g' >> << g g, >> } << { g4 g g8 g g4 } { g'4 g g8 g g4 } >> |
-  \times 2/3 { << g8 g, >> << g g' >> << g g, >> } << { g4 g g8 g g4 } { g'4 g g8 g g4 } >> |
+  << \transpose c g \celloMotifCC   s\fff >> |
+  \transpose c g \celloMotifCC |
+  \transpose c g \celloMotifCC |
   
   \barNumberCheck #113
-  g,2.~ g2~ |
+  g,,2.~ g2~ |
   g2. d'2 |
   df2.~ df2~ |
   df2.~ df2~ |
@@ -153,8 +151,7 @@ cello = \relative c {
   ef4.( d8) ef4.( e8) f4~( |
   f8 g) a4.( b8) af4.( g8) \bar "||"
   %% todo: add half=half note
-  \time 5/2
-  \tempo \markup{\concat {(\teeny \general-align #Y #DOWN \note #"2" #1   " = "    \teeny \general-align #Y #DOWN \note #"2" #1)}}
+  \timeChangeRehersalVI
   af4 r r2 r r1 |
   r1. r2 \clef bass g,2\ffff |
   c,1.~( c2 f) |
@@ -164,9 +161,8 @@ cello = \relative c {
   \barNumberCheck #172
   \mark\default
   \time 3/4
-  \tempo \markup{\concat{(\teeny \general-align #Y #DOWN \note #"4" #1   " = "    \teeny \general-align #Y #DOWN \note #"4" #1)}}
+  \timeChangeRehersalXI
   \clef tenor
-  %% TODO quarter=quarter
   r16 ds''-._\markup{\italic cresc.}\p e-. fs-.   g-. a,-. b-. cs-.   ds-. fs,-. g-. a-. |
   r ds^\markup{\italic simile} e fs g ds e fs g a, b c |
   r a b cs ds fs g a g fs e ds |
@@ -179,13 +175,13 @@ cello = \relative c {
   \barNumberCheck #178
   \mark\default
   g8-. r8 r4 r |
-  r << {c,8\ffff c c4 } {c,8-> c-> c4-> } >> |
-  % Now this rest has to be separate because of LilyPond issue 128
-  r4^\markup{\bold{Rall. al fine}} << { c8-> c-> c4-> } { c'8 c c4 } >> |
-  % sigh. Issue 245 again.
-  \times 2/3 { <<c8 c,-> >> <<c-> c'>> <<c c,-> >> } <<c4-> c'>> r4 |
-  << { r c c | r r c | c c r } {r c,-> c-> | r r c-> | c-> c-> r } >>
-  << c2. g' >>
   
+  r <c, c,>8->\ffff q-> q4-> |
+  r^\markup{\bold{Rall. al fine}} <c c,>8-> q-> q4-> |
+  \times 2/3 { q8-> q-> q-> } q4-> r |
+  r q-> q-> |
+  r r q-> |
+  q-> q-> r |
+  <g c,>2.
   \bar "|."
 }

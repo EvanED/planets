@@ -1,3 +1,5 @@
+% -*- master:../mars.ly;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 stringIntroToRehersalI = \relative c' {
@@ -47,8 +49,7 @@ violinViolaNaturale = \relative c' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 celloMotifCC = \relative c {
-  % The following measure is funky because of a lilypond bug (issue 245)
-  \times 2/3 { <<c8 c,>> <<c c'>> <<c c,>>} << { c4 c c8 c c4 } { c' c c8 c c4 } >>
+  \times 2/3 { <c c,>8 q q } q4 q q8 q q4
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
