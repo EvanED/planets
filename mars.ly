@@ -30,6 +30,11 @@ global = {
   \tempo "Allegro" 4=135
   \set Score.markFormatter = #format-mark-box-numbers
   \compressFullBarRests
+  
+  % The following adds slur-event to the default
+  \set Score.quotedCueEventTypes = #'(note-event rest-event tie-event
+                                      beam-event tuplet-span-event
+                                      slur-event)
 }
 
 timeChangeRehersalVI = {
@@ -45,19 +50,8 @@ timeChangeRehersalXI = {
 }
 
 
-organRight = \relative c'' {
-  \global
-  R1*5/4*16 \mark\default |
-}
-
-
-organLeft = \relative c {
-  \global
-  R1*5/4*16
-}
-
-
 \include "mars/misc-harp.ly"
+\include "mars/misc-organ.ly"
 
 \include "mars/string-snippets.ly"
 \include "mars/string-violin-1.ly"
@@ -66,6 +60,7 @@ organLeft = \relative c {
 \include "mars/string-cello.ly"
 \include "mars/string-bass.ly"
 
+\addQuote "violin1" { \violinI }
 \addQuote "violin2" { \violinII }
 
 \include "mars/global-staves.ly"
