@@ -6,11 +6,11 @@ timpaniI = \relative c {
   << \motif g  s4\p^\markup{wooden sticks} >> |
   \motif g |
   \motif g |
-  \motif g |
-  \motif g |
+  << \motif g  s4\< >> |
+  << \motif g  s4\> >> |
   
   \barNumberCheck #6
-  \motif g |
+  << \motif g  s4\! >> |
   \motif g |
   \motif g |
   \motif g |
@@ -19,43 +19,43 @@ timpaniI = \relative c {
   \barNumberCheck #11
   \motif g |
   \motif g |
-  \motif g |
+  << \motif g   s4\mf_\markup\italic{dim.} >> |
   \motif g |
   \motif g |
   
   \barNumberCheck #16
   \motif g |
   \mark\default
-  \motif g |
-  \motif g |
-  \motif g |
-  \motif g |
+  << \motif g   s4\p >> |
+  << \motif g   s4\< >> |
+  << \motif g   s4\> >> |
+  << \motif g   s4\! >> |
   
   \barNumberCheck #21
   \motif g |
   \motif g |
+  << \motif g   s4_\markup{\italic{cresc.}} >> |
   \motif g |
-  \motif g |
-  \motif g |
+  << \motif g   s4\mf_\markup{\italic{cresc.}} >> |
   
   \barNumberCheck #26
   \motif g |
   \motif g |
-  \motif g |
-  \motif g |
-  \motif g |
+  << \motif g   { s2. s4\< } >> |
+  << \motif g   { s2\f s\> } >> |
+  << \motif g   { s2.\! s4\< } >> |
   
   \barNumberCheck #31
-  \motif g |
-  \motif g |
-  \motif g |
-  \motif g |
+  << \motif g   { s2.\f s4\> } >> |
+  << \motif g   { s2.\! s4\< } >> |
+  << \motif g   { s2.\f\> s4\< } >> |
+  << \motif g   s4\f_\markup{\italic{cresc.}} >> |
   \motif g |
   
   \barNumberCheck #36
   \motif g |
   \motif g |
-  \motif g |
+  << \motif g   s4_\markup{\italic{sempre cresc.}} >> |
   \motif g |
   \mark\default
   R1*5/4*16
