@@ -106,18 +106,6 @@ tromboneII = \relative c {
   
 }
 
-timpani = \relative c {
-  \global
-  % Music follows here.
-  
-}
-
-glockenspiel = \relative c'' {
-  \global
-  % Music follows here.
-  
-}
-
 fluteIPart = \new Staff \with {
   instrumentName = "Fl. I"
   shortInstrumentName = "Fl. I"
@@ -220,11 +208,20 @@ tromboneIIPart = \new Staff \with {
   midiInstrument = "trombone"
 } { \clef bass \tromboneII }
 
-timpaniPart = \new Staff \with {
-  instrumentName = "Tmp."
-  shortInstrumentName = "Tmp."
-  midiInstrument = "timpani"
-} { \clef bass \timpani }
+timpaniPart = \new GrandStaff {
+  <<
+    \new Staff \with {
+      instrumentName = "Tmp."
+      shortInstrumentName = "Tmp."
+      midiInstrument = "timpani"
+    } { \clef bass \timpaniI }
+    \new Staff \with {
+      instrumentName = "Tmp."
+      shortInstrumentName = "Tmp."
+      midiInstrument = "timpani"
+    } { \clef bass \timpaniII }
+  >>
+}
 
 gongPart = \new Staff \with {
   %\consists "Instrument_name_engraver"
