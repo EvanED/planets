@@ -226,11 +226,11 @@ timpaniPart = \new Staff \with {
   midiInstrument = "timpani"
 } { \clef bass \timpani }
 
-glockenspielPart = \new Staff \with {
-  instrumentName = "Gls."
-  shortInstrumentName = "Gls."
-  midiInstrument = "glockenspiel"
-} \glockenspiel
+gongPart = \new Staff \with {
+  %\consists "Instrument_name_engraver"
+  instrumentName = "Percussion"
+  shortInstrumentName = "Perc."
+} { \clef bass \percussion }
 
 organPart = <<
   \new PianoStaff \with {

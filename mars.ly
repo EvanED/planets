@@ -50,6 +50,7 @@ timeChangeRehersalXI = {
 }
 
 
+\include "mars/misc-percussion.ly"
 \include "mars/misc-harp.ly"
 \include "mars/misc-organ.ly"
 
@@ -86,7 +87,8 @@ timeChangeRehersalXI = {
 %    \tromboneIIPart
 %    \timpaniPart
 %    \glockenspielPart
-    \organPart
+  \gongPart
+%    \organPart
 %    \harpIPart
 %    \harpIIPart
 %    \violinIPart
