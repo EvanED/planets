@@ -126,6 +126,65 @@ organLeft = \relative c {
   R1*5/4    |
   R1*5/4    |
   R1*5/4    |
+  r2 r4 f,2( |
+  
+  \barNumberCheck #58
+  g8) r r4 r r2 |
+  r2 r4 g2( |
+  a8) r r4 r r2 |
+  r r4 bf2( |
+  c8) r r4 r bf2( |
+  c8) r r4 r bf2( |
+  
+  \barNumberCheck #64
+  c8) r r4 r r2 |
+  r2 r4 c2 |
+  f,4 r r r2 |
+  R1*5/4 |
+  R1*5/4*16 |
+  R1*5/4*7 |
+  R1*5/4*4 |
+  
+  \barNumberCheck #95
+  r2^\markup{\italic{Ped. reeds Diap}} <<
+    { gs4. r8 r2 r1 }
+    \\
+    { gs1~ gs^\fermata }
+  >> |
+  R1*5/2*8 |
+  R1*5/2*6 |
+  R1*5/4*20 |
+  R1*5/4*3 |
+  
+  \barNumberCheck #133
+  r2 r4 \clef treble <df''' af f>2( |
+  <b g d>8)-> r8 r4 r r2 |
+  r2 r4 <df af f>2( |
+  <b g d>8)-> r8 r4 r r2 |
+  R1*5/4*9 |
+  R1*5/4*9 |
+  R1*5/4*3
+  
+  \barNumberCheck #158
+  r2 r4 \clef bass c,,,2( |
+  d8)-> r8 r4 r r2 |
+  r2 r4 d2( |
+  e8)-> r8 r4 r r2 |
+  
+  \barNumberCheck #162
+  r2 r4 f2( |
+  g8) r8 r4 r f2( |
+  g8) r8 r4 r f2( |
+  g2.~) g2~ |
+  g2. g2 |
+  
+  \barNumberCheck #167
+  <c c,>1.~ q1~ |
+  q1.( f,2) g |
+  c1.~( c2 f,) |
+  R1*5/2*2 |
+  R1*3/4*6 |
+  R1*3/4*8 |
 }
 
 
