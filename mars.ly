@@ -87,13 +87,13 @@ timeChangeRehersalXI = {
 %    \timpaniPart
 %    \glockenspielPart
     \organPart
-    \harpIPart
-    \harpIIPart
-    \violinIPart
-    \violinIIPart
-    \violaPart
-    \celloPart
-    \contrabassPart
+%    \harpIPart
+%    \harpIIPart
+%    \violinIPart
+%    \violinIIPart
+%    \violaPart
+%    \celloPart
+%    \contrabassPart
   >>
   \layout { }
   \midi { }

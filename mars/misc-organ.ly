@@ -13,18 +13,17 @@ organRight = \relative c'' {
       
       \barNumberCheck #58
       \mark\default
-      c8) r r4 r r2 |
-      r2 r4
-      ef2( |
-      cs8) r r4 r r2 |
-      r2 r4 gf'2( |
-      e8) r r4 r gf2( |
-      e8) r r4 r gf2( |
+      c8) \oneVoice r r4 r r2 |
+      r2 r4 \voiceOne ef2( |
+      cs8) \oneVoice r r4 r r2 |
+      r2 r4 \voiceOne gf'2( |
+      e8) \oneVoice r r4 r \voiceOne gf2( |
+      e8) \oneVoice r r4 r \voiceOne gf2( |
       
       \barNumberCheck #64
-      e8) r r4 r r2 |
-      r2 r4 e2 |
-      <bf ef bf'>4 r r r2 |
+      e8) \oneVoice r r4 r r2 |
+      r2 r4 \voiceOne e2 |
+      <bf ef bf'>4 \oneVoice r r r2 |
     }
     \\
     { <f af>4.( <e g>8 |
@@ -73,15 +72,15 @@ organRight = \relative c'' {
     {
       af,2( |
       \mark\default
-      f8) r8 r4 r r2 |
-      r2 r4 bf2( |
-      gs8) r r4 r r2 |
+      f8) \oneVoice r8 r4 r r2 |
+      r2 r4 \voiceOne bf2( |
+      gs8) \oneVoice r r4 r r2 |
       \barNumberCheck #162
-      r2 r4 df'2( |
-      b8) r r4 r4 df2( |
-      b8) r r4 r4 df2( |
-      b8) r r4 r4 r2 |
-      r2 r4 <b b,>2 |
+      r2 r4 \voiceOne df'2( |
+      b8) \oneVoice r r4 r4 \voiceOne df2( |
+      b8) \oneVoice r r4 r4 \voiceOne df2( |
+      b8) \oneVoice r r4 r4 r2 |
+      r2 r4 \voiceOne <b b,>2 |
       
       \barNumberCheck #167
       \timeChangeRehersalVI
