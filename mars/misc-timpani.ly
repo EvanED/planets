@@ -189,7 +189,136 @@ timpaniI = \relative c {
   \bar "|."
 }
 
-timpaniII = \relative c { g8 }
+timpaniII = \relative c {
+  \global
+  R1*5/4*36 |
+  R1*5/4^\markup{felt sticks} |
+  ef2.:32\p_\markup{\italic{cresc}} ef2:32 |
+  ef2.:32 ef2:32\< |
+  << \motif c   s4\fff >> |
+  
+  \barNumberCheck #41
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  \motif c |
+  
+  \barNumberCheck #56
+  \motif c |
+  \times 2/3 { c8 c c } c4 c r2 |
+  ef8-> r r4 r r2 |
+  R1*5/4 |
+  a,2.->\startTrillSpan a2 |
+  
+  \barNumberCheck #61
+  a2. r2\stopTrillSpan |
+  c2.\startTrillSpan-> r2\stopTrillSpan |
+  c2.\startTrillSpan-> r2\stopTrillSpan |
+  c2.\startTrillSpan-> c2 |
+  << c2. { s2 s8 s\stopTrillSpan } >> << c2\<\startTrillSpan { s4 s8 s16 s\stopTrillSpan } >> |
+  ef4->\! r r r2 |
+  
+  \barNumberCheck #67
+  R1*5/4
+  R1*5/4*7 |
+  a,4\f a a a a |
+  a a a a a |
+  R1*5/4*2 |
+  r4 a a a a |
+  R1*5/4 |
+  
+  \barNumberCheck #81
+  R1*5/4
+  a2.:32 a2:32 |
+  R1*5/4^\markup{A to G\sharp} |
+  R1*5/4*9 |
+  gs8->\f r r4 r r2 |
+  R1*5/4
+  
+  \barNumberCheck #95
+  r2 gs1\ff\>\startTrillSpan << gs1^\fermata  { s2 s4 s8 s16 s\stopTrillSpan\! } >> |
+  R1*5/2*4
+  gs1.\p\<\startTrillSpan << gs1   { s2 s4\> } >> |
+  gs1.\< << gs1   { s2 s4\> } >> |
+  gs1.\< << gs1   { s2 s4\> } >>
+  gs1.\< << gs1   { s2 s4\> s8 s16 s\stopTrillSpan } >> |
+  R1*5/2\!^\markup{G\sharp to G\natural}
+  
+  \barNumberCheck #105
+  R1*5/2*5 |
+  
+  \barNumberCheck #110
+  << \motif g  s4\fff >> |
+  \motif g |
+  \motif g |
+  R1*5/4*17
+  
+  \barNumberCheck #130
+  R1*5/4*3 |
+  r2. g2\f\<\startTrillSpan |
+  g4->\!\stopTrillSpan r r r2 |
+  
+  \barNumberCheck #135
+  r2. g2\<\startTrillSpan |
+  \times 2/3 { g8\f\stopTrillSpan-> g g } g4 g g8 g g4 |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  
+  \barNumberCheck #146
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  \motif g |
+  
+  \barNumberCheck #158
+  \times 2/3 { g8 g g } g4 g c2\<\startTrillSpan |
+  g8->\stopTrillSpan\! r8 r4 r r2 |
+  R1*5/4
+  c8-> r r4 r r2 |
+  R1*5/4*5
+  
+  \barNumberCheck #167
+  \timeChangeRehersalVI
+  c1.\ffff\startTrillSpan c1 | << c1. { s1 s4 s8 s\stopTrillSpan} >> r2 r |
+  R1*5/2*3 |
+  R1*3/4*6 |
+  
+  \barNumberCheck #178
+  \times 2/3 { c8\ffff-> c-> c-> } c4-> r |
+  r c8-> c-> c4-> |
+  r4^\markup{\bold{Rall. al Fine}} c8-> c-> c4-> |
+  \times 2/3 { c8-> c-> c-> } c4-> r4 |
+  r c-> c-> |
+  r r c-> |
+  c-> c-> r |
+  << c2.^\fermata\startTrillSpan  { s2 s8 s16 s\stopTrillSpan } >>
+}
 
 
 
