@@ -147,9 +147,9 @@ organLeft = \relative c {
   
   \barNumberCheck #95
   r2^\markup{\italic{Ped. reeds Diap}} <<
-    { gs4. r8 r2 r1 }
+    { gs4. f'8\rest f2\rest f1\rest }
     \\
-    { gs1~ gs^\fermata }
+    { gs,1~ gs^\fermata }
   >> |
   R1*5/2*8 |
   R1*5/2*6 |
@@ -188,3 +188,49 @@ organLeft = \relative c {
 }
 
 
+organDynamics = \new Dynamics {
+  \global
+  R1*5/4*16 |
+  R1*5/4*23 |
+  R1*5/4*14 |
+  R1*5/4    |
+  R1*5/4    |
+  R1*5/4    |
+  s2 s4 s4\f\< s |
+  s\! s s s s |
+  s s s s\< s |
+  s1\! s4 |
+  s\! s s s\< s |
+  s\! s s s\< s |
+  s\! s s s\< s |
+  s\! s s s s |
+  s s s s\< s |
+  s1\! s4 |
+  R1*5/4*1
+  R1*5/4*16
+  R1*5/4*7
+  R1*5/4*4
+  s2 s\ff\> s s s\! |
+  R1*5/2*8 |
+  R1*5/2*6 |
+  R1*5/4*20 |
+  R1*5/4*3 |
+  r2 r4 s\ff\< s |
+  s8 s\! s4 s s s |
+  s s s s\< s |
+  s8 s\! s4 s s s |
+  R1*5/4*9 |
+  R1*5/4*9 |
+  R1*5/4*3 |
+  r2 r4 s\f\< s |
+  s16 s\! s8 s4 s s s |
+  s s s s\< s |
+  s16 s\! s8 s4 s s s |
+  s s s s\< s |
+  s32 s\> s16 s8\! s4 s s\< s |
+  s32 s\> s16 s8\! s4 s s\< s |
+  s32 s\> s16 s8\! s4_\markup{\italic{cresc}} s s s |
+  s1 s4 |
+  s4\ffff s s1 s |
+  s1. s2 s2\f^\markup{\italic{meno}}
+}  

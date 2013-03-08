@@ -240,6 +240,7 @@ organPart = <<
     \new Staff = "organRight" \with {
       midiInstrument = "church organ"
     } \organRight
+    \organDynamics
     \new Staff = "organLeft" \with {
       midiInstrument = "church organ"
     } { \clef bass \organLeft }
