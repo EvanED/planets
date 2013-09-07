@@ -1,13 +1,3 @@
-fluteI = \relative c'' {
-  \global
-  % Music follows here.
-}
-
-fluteII = \relative c'' {
-  \global
-  % Music follows here.
-  
-}
 
 oboeI = \relative c'' {
   \global

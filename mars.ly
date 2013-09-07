@@ -49,6 +49,7 @@ timeChangeRehersalXI = {
   \tempo \markup{\concat{(\teeny \general-align #Y #DOWN \note #"4" #1   " = "    \teeny \general-align #Y #DOWN \note #"4" #1)}}
 }
 
+\include "mars/wind-flute-1-2.ly"
 
 \include "mars/misc-timpani.ly"
 \include "mars/misc-percussion.ly"
@@ -69,8 +70,8 @@ timeChangeRehersalXI = {
 
 \score {
   <<
-%    \fluteIPart
-%    \fluteIIPart
+    \fluteIPart
+    \fluteIIPart
 %    \oboeIPart
 %    \oboeIIPart
 %    \englishHornPart
@@ -86,9 +87,9 @@ timeChangeRehersalXI = {
 %    \trumpetCIIPart
 %    \tromboneIPart
 %    \tromboneIIPart
-    \timpaniPart
-%    \glockenspielPart
-%  \gongPart
+
+%    \timpaniPart
+%    \gongPart
 %    \organPart
 %    \harpIPart
 %    \harpIIPart

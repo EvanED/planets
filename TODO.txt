@@ -1,0 +1,14 @@
+Organ part: typeset measure 95
+
+Percussion part: fix mid-part second staff
+                 - should start at beginning of line
+                 - should be labeled
+                 leading name should change with the part
+
+Timpani: show prep
+         make trills go right up to barline
+         
+Percent repeats: when?
+
+
+flute 1/2:  cues
